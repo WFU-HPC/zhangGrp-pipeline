@@ -13,7 +13,7 @@
 SOFTWARE="$1"
 
 # set up environment (improve in the future)
-module load compilers/gcc/10.2.0 R/4.2.1 utils/git/2.36.1 && unset JAVA_HOME
+module load compilers/gcc/10.2.0 python/3.8.13 R/4.2.1 utils/git/2.36.1 && unset JAVA_HOME
 export PATH="${SOFTWARE}/bin:${SOFTWARE}/java/bin:$PATH"
 
 ################################################################################
@@ -150,6 +150,9 @@ samtools index $RECAL_BAM
 # STEP 6.1 - Create mapping and coverage statistics
 samtools flagstats $RECAL_BAM
 samtools coverage $RECAL_BAM
+
+# STEP 7 - Convert bam files into bw files
+bamCoverage -b ${OUTPUT}/${BASE//_}Aligned.sortedByCoord.out.bam -o ${OUTPUT}/${BASE//_}coverage.bw
 
 # remove STAR tmp directory
 rm -rf "${OUTPUT}/${BASE//_}_STARtmp"
