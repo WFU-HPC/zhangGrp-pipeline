@@ -249,7 +249,7 @@ Some basic Slurm commands:
 sinfo -p small      # general state of the nodes (i.e. how busy is the cluster?)
 
 squeue              # view all jobs in the queue
-squeue -u $USER     # view all jobs in the queue belonging to $USER
+squeue --me         # view all jobs in the queue belonging to you
 
 scancel 4191218     # cancel a specific job with job id 4191218
 scancel -u $USER    # cancel ALL jobs belonging to $USER
