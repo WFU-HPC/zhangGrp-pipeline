@@ -18,6 +18,18 @@ export RESEARCH=/deac/bio/zhangGrp
 In other words, when you see `$RESEARCH` or `${RESEARCH}` below, know that it is
 exactly equivalent to the path listed there.
 
+To obtain this repo and the scripts clone it into your research path:
+
+```sh
+git clone https://github.com/WFU-HPC/zhangGrp-pipeline pipeline
+```
+
+and for convenience, you can create a symbolic link to the `scripts` directory
+
+```sh
+ln -sf $(realpath ./pipeline/scripts) ${RESEARCH}/scripts
+```
+
 
 ## Step 0: Installing the software (ONLY ONCE)
 
