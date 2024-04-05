@@ -3,6 +3,10 @@
 # copyright (c) 2022 - Danny Arends
 #
 
+## To load the R package.
+## $ module load R.4.2.1
+## make sure to type in R.4.2.1
+
 library("GenomicAlignments")
 library("GenomicFeatures")
 library("Rsamtools")
