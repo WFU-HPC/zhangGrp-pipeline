@@ -5,7 +5,7 @@
 
 ## To load the R package.
 ## $ module load R.4.2.1
-## make sure to type in R.4.2.1
+## make sure to type in R again after $ sign
 
 library("GenomicAlignments")
 library("GenomicFeatures")
